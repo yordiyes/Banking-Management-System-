@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.util.Date;
 
 public class Deposit extends JFrame implements ActionListener {
+    //Creating TextField called amount
     JTextField amount;
     JButton deposit, back;
     String pinNumber;
