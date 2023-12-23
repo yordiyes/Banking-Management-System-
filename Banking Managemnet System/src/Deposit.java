@@ -13,7 +13,7 @@ public class Deposit extends JFrame implements ActionListener {
     //Creating variable called pinNumber to store the string form of the pinNumber variable\
     String pinNumber;
     Deposit(String pinNumber){
-
+        // Assigning pinNumber to the global variable pinNumber
         this.pinNumber = pinNumber;
         setLayout(null);
 
