@@ -33,11 +33,18 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
         // add the back button to the image label
         image.add(back);
 
+        // create a connection object to connect to the database
         Conn connection = new Conn();
+
+        // Declare and initialize a balance variable to store the current balance
         int balance = 0;
 
+        // use a try-catch block to handle any SQL exceptions
         try{
+            // execute a query to get the records from the bank table where the pin number matches
             ResultSet rs = connection.statement.executeQuery("select *from bank where pin = '"+ pinnumber+"'");
+
+            // loop through the result set and update the balance according to the type and amount of the transactions
             while(rs.next()){
                 if(rs.getString("type").equals("Deposit")){
                     balance += Integer.parseInt(rs.getString("amount"));
@@ -53,16 +60,19 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
             System.out.println(e);
         }
 
+        // create a label with the text showing the current balance and set its properties
         JLabel text = new JLabel("Your Current Account Balance is "+balance + " Birr.");
         text.setForeground(Color.WHITE);
         text.setBounds(170,300,400,30);
         image.add(text);
 
+        // set the size, location, and visibility of the frame
         setSize(900,900);
         setLocation(300,0);
         setUndecorated(true);
         setVisible(true);
     }
+
     public void actionPerformed(ActionEvent ae){
         setVisible(false);
         new Transactions(pinNumber).setVisible(true);
