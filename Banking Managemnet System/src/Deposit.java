@@ -10,7 +10,7 @@ public class Deposit extends JFrame implements ActionListener {
     JTextField amount;
     //creating button called deposit, back
     JButton deposit, back;
-    //Creating variable called pinNumber to store the string form of pinNumber
+    //Creating variable called pinNumber to store the string form of the pinNumber variable
     String pinNumber;
     Deposit(String pinNumber){
 
