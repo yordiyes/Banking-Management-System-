@@ -6,6 +6,7 @@ public class Conn{
     static Statement statement;
     //the constructor Conn
     public Conn(){
+        //the try catch block
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection("jdbc:mysql:///bankManagementSystem","root","yordanos");
