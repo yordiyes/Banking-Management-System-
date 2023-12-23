@@ -1,20 +1,19 @@
+// Import necessary packages
 import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
 import com.toedter.calendar.JDateChooser;
 import java.awt.event.*;
 import javax.swing.text.AbstractDocument;
-import javax.swing.text.AttributeSet;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.DocumentFilter;
 
+// Class declaration, extending JFrame and implementing ActionListener interface
 public class SignupOne extends JFrame implements ActionListener{
     JTextField nameTextField, fatherNameTextField, emailTextField, addressTextField, cityTextField, regionTextField, pinTextField;
     JRadioButton  male, female, married, unMarried, other ;
     JDateChooser dateChooser;
     JButton back, next;
     Random ran = new Random();
-
+    // Generate a random form number
     long random = Math.abs((ran.nextLong() % 9000L) + 1000L);
 
     SignupOne (){
