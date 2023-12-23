@@ -168,6 +168,7 @@ public class SignupOne extends JFrame implements ActionListener{
         // Add document filter to pinTextField (accepts only numbers)
         ((AbstractDocument) pinTextField.getDocument()).setDocumentFilter(new NumericOnlyDocumentFilter());
 
+        // Create and add "Next" button
         next = new JButton("Next");
         next.setBackground(Color.BLACK);
         next.setForeground(Color.white);
@@ -176,6 +177,7 @@ public class SignupOne extends JFrame implements ActionListener{
         next.addActionListener(this);
         add(next);
 
+        // Create and add "Back" button
         back = new JButton("BACK");
         back.setBounds(300, 640, 80, 30);
         back.setForeground(Color.WHITE);
@@ -238,7 +240,7 @@ public class SignupOne extends JFrame implements ActionListener{
             }
         }
     }
-
+    // Main method to start the application
     public static void main(String args[]){
         new SignupOne();
     }
