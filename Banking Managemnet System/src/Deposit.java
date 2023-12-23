@@ -8,6 +8,7 @@ import java.util.Date;
 public class Deposit extends JFrame implements ActionListener {
     //Creating TextField called amount
     JTextField amount;
+    //creating button called deposit, back
     JButton deposit, back;
     String pinNumber;
     Deposit(String pinNumber){
