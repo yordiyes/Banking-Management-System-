@@ -17,6 +17,7 @@ public class Deposit extends JFrame implements ActionListener {
         this.pinNumber = pinNumber;
         setLayout(null);
 
+        //Adding an image called "atm.jpg" in to the window
         ImageIcon img1 = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
         Image img2 = img1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
         ImageIcon img3 = new ImageIcon(img2);
