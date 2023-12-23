@@ -4,6 +4,7 @@ import java.sql.*;
 public class Conn{
     Connection connection;
     static Statement statement;
+    //the constructor Conn
     public Conn(){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
