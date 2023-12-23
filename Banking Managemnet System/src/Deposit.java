@@ -6,14 +6,18 @@ import java.awt.event.ActionListener;
 import java.util.Date;
 
 public class Deposit extends JFrame implements ActionListener {
+    //Creating TextField called amount
     JTextField amount;
+    //creating button called deposit, back
     JButton deposit, back;
+    //Creating variable called pinNumber to store the string form of the pinNumber variable\
     String pinNumber;
     Deposit(String pinNumber){
-
+        // Assigning pinNumber to the global variable pinNumber
         this.pinNumber = pinNumber;
         setLayout(null);
 
+        //Adding an image called "atm.jpg" in to the window
         ImageIcon img1 = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
         Image img2 = img1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
         ImageIcon img3 = new ImageIcon(img2);
@@ -42,6 +46,7 @@ public class Deposit extends JFrame implements ActionListener {
         back.addActionListener(this);
         image.add(back);
 
+        // Setting the size of the window to 900 by 900
         setSize(900, 900);
         setLocation(300, 0);
         setVisible(true);
@@ -55,10 +60,16 @@ public class Deposit extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(null, "Please enter the amount you want to deposit");
             }else{
                 try{
+                    // creating connection object
                     Conn connection = new Conn();
-                    String query = "INSERT into bank VALUES ('" + pinNumber + "', '" + date + "', 'Deposit', '" + number + "')";
+
+                    // inserting the data to the bank table
+                    String query = "insert into bank VALUES ('" + pinNumber + "', '" + date + "', 'Deposit', '" + number + "')";
                     connection.statement.executeUpdate(query);
+
+                    // a message to notify that the money have been succesfully deposited
                     JOptionPane.showMessageDialog(null, number +" Birr Deposited Successfully");
+
                     setVisible(false);
                     new Transactions(pinNumber).setVisible(true);
 

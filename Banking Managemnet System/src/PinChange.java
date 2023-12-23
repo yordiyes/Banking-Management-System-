@@ -84,26 +84,26 @@ public class PinChange extends JFrame implements ActionListener {
                     JOptionPane.showMessageDialog(null, "Please re-enter new PIN");
                     return;
                 }
-//
-//                Conn connection = new Conn();
-//                String query1 = "update bank set pin='" + rPin + "' where pin='" + pinNumber + "'";
-//                String query2 = "update login set pin='" + rPin + "' where pin='" + pinNumber + "'";
-//                String query3 = "update signupThree set pin='" + rPin + "' where pin='" + pinNumber + "'";
-//
-//                connection.statement.executeUpdate(query1);
-//                connection.statement.executeUpdate(query2);
-//                connection.statement.executeUpdate(query3);
-//
-//                JOptionPane.showMessageDialog(null, "PIN changed successfully");
-//
-//                setVisible(false);
-//                new Transactions(rPin).setVisible(true);
+
+                Conn connection = new Conn();
+                String query1 = "update bank set pin='" + rPin + "' where pin='" + pinNumber + "'";
+                String query2 = "update login set pin='" + rPin + "' where pin='" + pinNumber + "'";
+                String query3 = "update signupThree set pin='" + rPin + "' where pin='" + pinNumber + "'";
+
+                connection.statement.executeUpdate(query1);
+                connection.statement.executeUpdate(query2);
+                connection.statement.executeUpdate(query3);
+
+                JOptionPane.showMessageDialog(null, "PIN changed successfully");
+
+                setVisible(false);
+                new Transactions(rPin).setVisible(true);
             } catch (Exception e) {
                 System.out.println(e);
             }
         } else {
             setVisible(false);
-           // new Transactions(pinNumber).setVisible(true);
+           new Transactions(pinNumber).setVisible(true);
         }
     }
     public static void main(String args[]) {

@@ -3,7 +3,7 @@ import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DocumentFilter;
 
-// Document filter to allow only alphabetic (character) input in a text field
+// Document filter to allow only alphabetic (character) input in any text field
 public class CharOnlyDocumentFilter extends DocumentFilter {
 
     // Override insertString method to filter and allow only alphabetic characters during insertion

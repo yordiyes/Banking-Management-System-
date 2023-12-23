@@ -1,25 +1,36 @@
+// Import the swing, AWT, Event,and SQL packages
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.sql.*;
+
+// Define a class named BalanceEnquiry that extends JFrame and implements ActionListener
 public class BalanceEnquiry extends JFrame implements ActionListener {
     JButton back;
     String pinNumber;
+    // Define a constructor that takes a pin number as parameter
     BalanceEnquiry(String pinnumber){
 
         this.pinNumber = pinnumber;
+        // set the layout manager to null
         setLayout(null);
 
+        // Load an image from the icons folder and scale it to fit the frame
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
         Image i2 = i1.getImage().getScaledInstance(900,900,Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
+
+        // create a label with the image and set its bounds
         JLabel image = new JLabel(i3);
         image.setBounds(0,0,900,900);
+        // add the label to the frame
         add(image);
 
+        // create a button with the text "Back" and set its bounds and action listener
         back = new JButton("Back");
         back.setBounds(355,520,150,30);
         back.addActionListener(this);
+        // add the back button to the image label
         image.add(back);
 
         Conn connection = new Conn();

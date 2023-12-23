@@ -1,18 +1,18 @@
-// Import necessary classes for document filtering
+// Import necessary classes for document filtering.
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DocumentFilter;
 
-// Document filter to allow only numeric input in a text field
+// Document filter to allow only numeric input in any text field.
 public class NumericOnlyDocumentFilter extends DocumentFilter {
 
-    // Override insertString method to filter and allow only numeric characters during insertion
+    // Override insertString method to filter and allow only numeric characters during insertion.
     @Override
     public void insertString(FilterBypass fb, int offset, String string, AttributeSet attr)
             throws BadLocationException {
         // Check if the inserted string contains only numeric characters
         if (containsOnlyNumbers(string)) {
-            // If so, call the superclass method to perform the insertion
+            // If so, call the superclass method to perform the insertion of the data.
             super.insertString(fb, offset, string, attr);
         }
     }

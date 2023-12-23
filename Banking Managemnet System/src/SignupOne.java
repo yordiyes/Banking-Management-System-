@@ -8,6 +8,7 @@ import javax.swing.text.AbstractDocument;
 
 // Class declaration, extending JFrame and implementing ActionListener interface
 public class SignupOne extends JFrame implements ActionListener{
+    //Creating text fields in order to accept data
     JTextField nameTextField, fatherNameTextField, emailTextField, addressTextField, cityTextField, regionTextField, pinTextField;
     JRadioButton  male, female, married, unMarried, other ;
     JDateChooser dateChooser;
@@ -188,6 +189,7 @@ public class SignupOne extends JFrame implements ActionListener{
 
         getContentPane().setBackground(Color.white);
 
+        //seting the size of the window to 900 by 900
         setSize(900, 900);
         setLocation(350,10);
         setVisible(true);
