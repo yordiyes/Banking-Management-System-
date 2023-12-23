@@ -12,7 +12,7 @@ public class PinChange extends JFrame implements ActionListener {
         this.pinNumber = pinnumber;
 
         setLayout(null);
-
+        // Load and set background image
         ImageIcon il = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
         Image i2 = il.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
