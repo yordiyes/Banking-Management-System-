@@ -228,9 +228,9 @@ public class SignupOne extends JFrame implements ActionListener{
                 if (name1.isEmpty() || (fatherName1.isEmpty()) || dateOfBirth1.isEmpty() || (address1.isEmpty()) || city1.isEmpty() || email1.isEmpty() || pinCode1.isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Fill The Whole Part Of The Form");
                 } else {
-                    Conn c = new Conn();
+                    Conn connection = new Conn();
                     String query = "insert into SignUpOne values('" + formNo + "','" + name1 + "','" + fatherName1 + "','" + dateOfBirth1 + "','" + gender1 + "','" + email1 + "','" + maritalStatus1 + "','" + address1 + "','" + city1 + "','" + pinCode1 + "','" + region1 + "')";
-                    Conn.statement.executeUpdate(query);
+                    connection.statement.executeUpdate(query);
 
                     setVisible(false);
                     new SignupTwo(formNo).setVisible(true);
