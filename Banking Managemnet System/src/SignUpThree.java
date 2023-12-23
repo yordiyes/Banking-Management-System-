@@ -4,12 +4,14 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 
+//defining a class caalled signupthree that extendes jframe and implements the method action listner
 public class SignUpThree extends JFrame implements ActionListener {
     //defining radio buttons
     JRadioButton radioButton1,radioButton2,radioButton3,radioButton4;
     //Defining checkBox
     JCheckBox checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6;
     JButton submit,cancel;
+
     String formNo;
     private String cardNumber;
     Random random = new Random();
