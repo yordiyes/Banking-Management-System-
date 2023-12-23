@@ -168,6 +168,7 @@ public class SignupOne extends JFrame implements ActionListener{
         // Add document filter to pinTextField (accepts only numbers)
         ((AbstractDocument) pinTextField.getDocument()).setDocumentFilter(new NumericOnlyDocumentFilter());
 
+        // Create and add "Next" button
         next = new JButton("Next");
         next.setBackground(Color.BLACK);
         next.setForeground(Color.white);
@@ -176,6 +177,7 @@ public class SignupOne extends JFrame implements ActionListener{
         next.addActionListener(this);
         add(next);
 
+        // Create and add "Back" button
         back = new JButton("BACK");
         back.setBounds(300, 640, 80, 30);
         back.setForeground(Color.WHITE);
@@ -226,9 +228,9 @@ public class SignupOne extends JFrame implements ActionListener{
                 if (name1.isEmpty() || (fatherName1.isEmpty()) || dateOfBirth1.isEmpty() || (address1.isEmpty()) || city1.isEmpty() || email1.isEmpty() || pinCode1.isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Fill The Whole Part Of The Form");
                 } else {
-                    Conn c = new Conn();
+                    Conn connection = new Conn();
                     String query = "insert into SignUpOne values('" + formNo + "','" + name1 + "','" + fatherName1 + "','" + dateOfBirth1 + "','" + gender1 + "','" + email1 + "','" + maritalStatus1 + "','" + address1 + "','" + city1 + "','" + pinCode1 + "','" + region1 + "')";
-                    Conn.statement.executeUpdate(query);
+                    connection.statement.executeUpdate(query);
 
                     setVisible(false);
                     new SignupTwo(formNo).setVisible(true);
@@ -238,7 +240,7 @@ public class SignupOne extends JFrame implements ActionListener{
             }
         }
     }
-
+    // Main method to start the application
     public static void main(String args[]){
         new SignupOne();
     }
