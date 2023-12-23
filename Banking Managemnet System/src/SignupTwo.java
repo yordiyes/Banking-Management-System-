@@ -185,10 +185,10 @@ public class SignupTwo extends JFrame implements ActionListener {
         String passPortNumber = passNumbTextField.getText();
         String phoneNumber = phoneTextField.getText();
 
-        try {
-            Conn connection = new Conn();
-            String query = "insert into signupTwo values('" + formno + "','" + Religion + "','" + Category + "','" + Income + "','" + Education + "','" + inOccupation + "','" + passPortNumber + "','" + phoneNumber + "','" + seniorcitizen + "','" + existingaccount + "')";
-            connection.statement.executeUpdate(query);
+         try {
+//            Conn connection = new Conn();
+//            String query = "insert into signupTwo values('" + formno + "','" + Religion + "','" + Category + "','" + Income + "','" + Education + "','" + inOccupation + "','" + passPortNumber + "','" + phoneNumber + "','" + seniorcitizen + "','" + existingaccount + "')";
+//            connection.statement.executeUpdate(query);
 
             setVisible(false);
             new SignUpThree(formno).setVisible(true);
@@ -198,7 +198,7 @@ public class SignupTwo extends JFrame implements ActionListener {
         }
     }
 
-    public static void main(String args[]) {
-        new SignupTwo(" ");
+        public static void main (String args[]){
+            new SignupTwo(" ");
+        }
     }
-}
