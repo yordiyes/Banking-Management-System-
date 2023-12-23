@@ -20,7 +20,7 @@ public class PinChange extends JFrame implements ActionListener {
         image.setBounds(0, 0, 900, 900);
 
         add(image);
-
+        // Label for the title
         JLabel text = new JLabel("CHANGE YOUR PIN");
         text.setForeground(Color.RED);
         text.setFont(new Font("System", Font.BOLD, 16));
