@@ -79,7 +79,7 @@ public class FastCash extends JFrame implements ActionListener {
         setVisible(true);
     }
 
-    // ActionListener implementation for handling button clicks
+// ActionListener implementation for handling button clicks
     public void actionPerformed(ActionEvent ae) {
         try {
             Conn connection  = new Conn();
