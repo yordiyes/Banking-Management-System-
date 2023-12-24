@@ -42,7 +42,7 @@ public class LoginTest {
     public void testSignupButton() {
         // Create an instance of the Login class
         Login login = new Login();
-        login.actionPerformed(new ActionEvent(login.login, ActionEvent.ACTION_PERFORMED, "login"));
+        login.actionPerformed(new ActionEvent(login.signup, ActionEvent.ACTION_PERFORMED, "signUp"));
 
     }
 }
