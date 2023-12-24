@@ -11,19 +11,19 @@ public class SignUpThree extends JFrame implements ActionListener {
     //Defining checkBox
     JCheckBox checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6;
     JButton submit,cancel;
-
     String formNo;
     private String cardNumber;
     Random random = new Random();
-
+    // Constructor for SignUpThree class
     SignUpThree(String formno) {
         this.formNo = formno;
         setLayout(null);
-
         // Generate a random 16-digit card number
         cardNumber = Long.toString(5040936000000000L + (long) (Math.random() * 9000000000000000L));
 
         setTitle("NEW ACCOUNT APPLICATION FORM - PAGE 3");
+
+        // Creating and configuring GUI components
         JLabel eleven11 = new JLabel("Page 3: Account Details");
         eleven11.setFont(new Font("Raleway", Font.BOLD, 22));
         eleven11.setBounds(280,40,400,40);
@@ -134,6 +134,7 @@ public class SignUpThree extends JFrame implements ActionListener {
         checkBox6.setBounds(100,660,600,40);
         add(checkBox6);
 
+        // ... (Additional GUI component configurations)
         submit = new JButton("Submit");
         submit.setBackground(Color.GREEN);
         submit.setForeground(Color.WHITE);
@@ -150,15 +151,17 @@ public class SignUpThree extends JFrame implements ActionListener {
         cancel.addActionListener(this);
         add(cancel);
 
+        // Setting background color
         getContentPane().setBackground(Color.WHITE);
 
+        // Setting frame size and visibility
         setSize(850,820);
         setLocation(350,0);
         setVisible(true);
-
     }
-
+    // ActionListener method implementation
     public void actionPerformed(ActionEvent ae){
+        // Handling button clicks
         if(ae.getSource() == submit){
             String accountType = "";
 
@@ -202,14 +205,18 @@ public class SignUpThree extends JFrame implements ActionListener {
                 facility = facility + "E-statement";
             }
             if (facility.isEmpty()) {
+                // Exit the method without processing further
                 JOptionPane.showMessageDialog(null, "Please choose at least one service");
-                return;  // Exit the method without processing further
+                return;
             }
             if (!checkBox6.isSelected()) {
+                // Stop further processing if the checkbox is not selected
                 JOptionPane.showMessageDialog(null, "You must agree to the declaration.");
-                return; // Stop further processing if the checkbox is not selected
+                return;
             }
+            // ... (Additional form validation and processing logic)
             try{
+                // Database connection and query execution
                 Conn connection = new Conn();
                 String query1 = "insert into signupThree values('"+formNo+"','"+accountType+"','"+this.cardNumber+"','"+pinNumberString+"','"+facility+"')";
                 String query2 = "insert into login values('"+formNo+"','" +cardNumber+"','"+pinNumber+"')";
@@ -217,7 +224,7 @@ public class SignUpThree extends JFrame implements ActionListener {
                 connection.statement.executeUpdate(query1);
                 connection.statement.executeUpdate(query2);
                 JOptionPane.showMessageDialog(null, "Card Number: " +cardNumber + "\n pin:" + pinNumber);
-
+                // Closing the current frame and opening a new frame
                 setVisible(false);
                 new Deposit(pinNumberString).setVisible(true);
             }catch (Exception e){
@@ -225,11 +232,12 @@ public class SignUpThree extends JFrame implements ActionListener {
             }
         }
         else if(ae.getSource()==cancel){
+            // Handling cancel button click
             setVisible(false);
             new Login().setVisible(true);
         }
     }
-
+    // Main method to instantiate the SignUpThree class
     public static void main(String[] args) {
         new SignUpThree("");
     }
