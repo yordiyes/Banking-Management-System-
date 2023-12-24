@@ -7,8 +7,8 @@ class DepositTest {
 
     @Test
     void actionPerformed_depositButtonClicked_successfullyDepositsAmount() {
-
-        Deposit deposit = new Deposit("");//instantiating object
+        //instantiating object
+        Deposit deposit = new Deposit("");
         deposit.amount.setText("100");
 
         deposit.actionPerformed(new ActionEvent(deposit.deposit, ActionEvent.ACTION_PERFORMED, null));
@@ -18,8 +18,8 @@ class DepositTest {
     @Test
     //testing the transactions navigation
     void actionPerformed_backButtonClicked_navigatesToTransactions() {
-
-        Deposit deposit = new Deposit("");//instantiating object
+        //instantiating object
+        Deposit deposit = new Deposit("");
 
 
         deposit.actionPerformed(new ActionEvent(deposit.back, ActionEvent.ACTION_PERFORMED, null));
