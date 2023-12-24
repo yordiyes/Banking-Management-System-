@@ -1,4 +1,4 @@
-//importing
+// Importing necessary Java Swing and AWT libraries
 import javax.swing.*;
 import javax.swing.text.AbstractDocument;
 import java.awt.*;
