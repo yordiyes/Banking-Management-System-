@@ -1,5 +1,4 @@
-
-//importing the necessary libraries
+// Importing the necessary libraries
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -7,18 +6,18 @@ import java.awt.event.ActionListener;
 import java.util.Date;
 
 public class Deposit extends JFrame implements ActionListener {
-    //Creating TextField called amount
+    // Creating TextField called amount
     JTextField amount;
-    //creating button called deposit, back
+    // Creating button called deposit, back
     JButton deposit, back;
-    //Creating variable called pinNumber to store the string form of the pinNumber variable\
+    // Creating variable called pinNumber to store the string form of the pinNumber variable\
     String pinNumber;
     Deposit(String pinNumber){
         // Assigning pinNumber to the global variable pinNumber
         this.pinNumber = pinNumber;
         setLayout(null);
 
-        //Adding an image called "atm.jpg" in to the window
+        // Adding an image called "atm.jpg" in to the window
         ImageIcon image1 = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
         Image image2 = image1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
         ImageIcon image3 = new ImageIcon(image2);
@@ -52,7 +51,6 @@ public class Deposit extends JFrame implements ActionListener {
         setLocation(350, 0);
         setVisible(true);
     }
-
     public void actionPerformed(ActionEvent actionEvent){
         if(actionEvent.getSource() == deposit){
             String number = amount.getText();
