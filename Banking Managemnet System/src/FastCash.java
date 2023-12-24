@@ -98,7 +98,7 @@ public class FastCash extends JFrame implements ActionListener {
                 }
             }
             
-// Checking if there is sufficient balance for withdrawal
+//Checking if there is sufficient balance for withdrawal
             if (ae.getSource() != button7 && balance < Integer.parseInt(amount)) {
                 JOptionPane.showMessageDialog(null, "Insufficient Balance");
                 return;
