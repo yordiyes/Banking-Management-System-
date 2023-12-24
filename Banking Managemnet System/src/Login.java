@@ -16,44 +16,41 @@ public class Login extends JFrame implements ActionListener {
         setTitle("Banking System");
         setLayout(null);
 
-        // Creating and scaling the logo image
+// Creating and scaling the logo image
         ImageIcon image1 = new ImageIcon(ClassLoader.getSystemResource("icons/logo.jpg"));
         Image image2 = image1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         ImageIcon image3 = new ImageIcon(image2);
         JLabel label = new JLabel(image3);
         add(label);
 
-        // Creating and setting the text label
+         
         JLabel text = new JLabel("Welcome TO SWE Bank ");
         text.setFont(new Font("Osward", Font.BOLD, 35));
         text.setBounds(200, 40, 600, 40);
         add(text);
 
-        // Creating and setting the card number label
+// Creating and setting the card number label
         JLabel cardNo = new JLabel("Account Number:");
         cardNo.setFont(new Font("Raleway", Font.BOLD, 20));
         cardNo.setBounds(120, 150, 600, 40);
         add(cardNo);
 
-        // Creating and setting the card number text field
         cardTextField = new JTextField();
         cardTextField.setBounds(300, 150, 250, 30);
         cardTextField.setFont(new Font("Arial", Font.BOLD, 14));
         add(cardTextField);
 
-        // Creating and setting the PIN label
         JLabel pin = new JLabel("Pin code:");
         pin.setFont(new Font("Raleway", Font.BOLD, 20));
         pin.setBounds(120, 220, 600, 40);
         add(pin);
 
-        // Creating and setting the PIN text field
         pinTextField = new JPasswordField();
         pinTextField.setBounds(300, 220, 250, 30);
         pinTextField.setFont(new Font("Arial", Font.BOLD, 20));
         add(pinTextField);
 
-        // Creating and setting the login button
+// Creating and setting the signin button       
         login = new JButton("SIGN IN");
         login.setBounds(300, 300, 100, 30);
         login.setForeground(Color.WHITE);
@@ -61,7 +58,6 @@ public class Login extends JFrame implements ActionListener {
         login.addActionListener(this);
         add(login);
 
-        // Creating and setting the clear button
         clear = new JButton("CLEAR");
         clear.setBounds(450, 300, 100, 30);
         clear.setForeground(Color.WHITE);
@@ -69,7 +65,7 @@ public class Login extends JFrame implements ActionListener {
         clear.addActionListener(this);
         add(clear);
 
-        // Creating and setting the signup button
+// Creating and setting the signup button
         signup = new JButton("SIGN UP");
         signup.setBounds(300, 350, 250, 30);
         signup.setForeground(Color.WHITE);
