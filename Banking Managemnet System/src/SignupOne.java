@@ -186,10 +186,9 @@ public class SignupOne extends JFrame implements ActionListener{
         back.addActionListener(this);
         add(back);
 
-
         getContentPane().setBackground(Color.white);
 
-        //seting the size of the window to 900 by 900
+        // Setting the size of the window to 900 by 900
         setSize(900, 900);
         setLocation(350, 0);
         setVisible(true);
