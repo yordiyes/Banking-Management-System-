@@ -12,15 +12,15 @@ public class PinChange extends JFrame implements ActionListener {
         this.pinNumber = pinnumber;
 
         setLayout(null);
-        // Load and set background image
-        ImageIcon il = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
-        Image i2 = il.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
-        ImageIcon i3 = new ImageIcon(i2);
-        JLabel image = new JLabel(i3);
+
+        ImageIcon imageIcon = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
+        Image image2 = imageIcon.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
+        ImageIcon image3 = new ImageIcon(image2);
+        JLabel image = new JLabel(image3);
         image.setBounds(0, 0, 900, 900);
 
         add(image);
-        // Label for the title
+
         JLabel text = new JLabel("CHANGE YOUR PIN");
         text.setForeground(Color.RED);
         text.setFont(new Font("System", Font.BOLD, 16));
@@ -60,7 +60,7 @@ public class PinChange extends JFrame implements ActionListener {
         image.add(back);
 
         setSize(900, 900);
-        setLocation(350, 0);
+        setLocation(300, 0);
         setUndecorated(true);
         setVisible(true);
     }
@@ -103,7 +103,7 @@ public class PinChange extends JFrame implements ActionListener {
             }
         } else {
             setVisible(false);
-           new Transactions(pinNumber).setVisible(true);
+            new Transactions(pinNumber).setVisible(true);
         }
     }
     public static void main(String args[]) {

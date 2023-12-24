@@ -64,7 +64,7 @@ public class SignUpThree extends JFrame implements ActionListener {
         groupaccount.add(radioButton3);
         groupaccount.add(radioButton4);
 
-        JLabel card = new JLabel("Card Number");
+        JLabel card = new JLabel("Account Number");
         card.setFont(new Font("Raleway", Font.BOLD, 22));
         card.setBounds(100,300,200,30);
         add(card);
@@ -74,7 +74,7 @@ public class SignUpThree extends JFrame implements ActionListener {
         number.setBounds(330,300,300,30);
         add(number);
 
-        JLabel carddetail = new JLabel("Your 16 Digit Card Number: ");
+        JLabel carddetail = new JLabel("Your 16 Digit Account Number: ");
         carddetail.setFont(new Font("Raleway", Font.BOLD, 12));
         carddetail.setBounds(100,330,300,30);
         add(carddetail);

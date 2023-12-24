@@ -3,17 +3,22 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
 import java.util.Date;
-
+// Declaring the FastCash class that extends JFrame and implements ActionListener interface
 public class FastCash extends JFrame implements ActionListener {
 
-    JLabel lable1, label3;
+    JLabel label1, label3;
     JButton button1, button2, button3, button4, button5, button6, button7;
     String pin;
+
+// Constructor for the FastCash class that takes a pin as a parameter
+
     FastCash(String pin) {
 
         this.pin = pin;
         setLayout(null);
 
+// Creating an ImageIcon object with the image file "atm.jpg"
+        
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
         Image i2 = i1.getImage().getScaledInstance(1000, 1180, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
@@ -21,10 +26,12 @@ public class FastCash extends JFrame implements ActionListener {
         label3.setBounds(0, 0, 960, 1080);
         add(label3);
 
-        lable1 = new JLabel("SELECT WITHDRAWL AMOUNT");
-        lable1.setForeground(Color.WHITE);
-        lable1.setFont(new Font("System", Font.BOLD, 16));
+// Creating a JLabel for displaying the text "SELECT WITHDRAWAL AMOUNT"
+        label1 = new JLabel("SELECT WITHDRAWAL AMOUNT");
+        label1.setForeground(Color.WHITE);
+        label1.setFont(new Font("System", Font.BOLD, 16));
 
+// Creating JButtons for different withdrawal amounts and setting their positions and sizes
         button1 = new JButton("100");
         button1.setBounds(170, 499, 150, 35);
         button1.addActionListener(this);
@@ -62,8 +69,9 @@ public class FastCash extends JFrame implements ActionListener {
 
         setLayout(null);
 
-        lable1.setBounds(235, 400, 700, 35);
-        label3.add(lable1);
+// Setting the position and size of the label1
+        label1.setBounds(235, 400, 700, 35);
+        label3.add(label1);
 
         setSize(960, 1080);
         setLocation(350, 0);
@@ -72,6 +80,7 @@ public class FastCash extends JFrame implements ActionListener {
 
     }
 
+// ActionListener implementation for handling button clicks
     public void actionPerformed(ActionEvent ae) {
         try {
             Conn connection  = new Conn();

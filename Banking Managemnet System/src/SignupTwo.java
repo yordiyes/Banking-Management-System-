@@ -57,7 +57,7 @@ public class SignupTwo extends JFrame implements ActionListener {
         inc.setBounds(100, 240, 200, 30);
         add(inc);
 
-        String[] incomeCatagory = {"Null","<5000", "<10000", "<20000", "<50000", "Other"};
+        String[] incomeCatagory = {"None","<5000", "<10000", "<20000", "<50000", "Other"};
         income = new JComboBox(incomeCatagory);
         income.setBounds(300, 240, 400, 30);
         income.setBackground(Color.WHITE);
