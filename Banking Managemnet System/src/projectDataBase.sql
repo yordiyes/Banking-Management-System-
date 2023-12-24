@@ -1,9 +1,10 @@
+--creating our database
 create database bankManagementSystem;
-
+--show available databases
 show databases;
-
+--selecting required database to use
 use bankManagementSystem;
-
+--showing available tables
 show tables;
 
 
@@ -24,13 +25,13 @@ select * from signupTwo;
 --creating table for signupThree class
 create table signupThree(formNo varchar(20), accountType varchar(40),
               accountNumber varchar(25),pin varchar(10), facility varchar(100));
-
+--select from signupThree
 select * from signupThree;
-
+--creating table for login class
 create table login(formNo varchar(20), AccountNumber varchar(25), pin varchar(10));
-
+-- select from login
 select * from login;
-
+--creating table for bank class
 create table bank(pin varchar(10), date varchar(50), type varchar(20), amount varchar(20));
-
+--select from bank
 select * from bank;
