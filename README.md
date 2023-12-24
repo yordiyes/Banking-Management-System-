@@ -30,7 +30,7 @@ Welcome to the Banking Management System, a Java-based application using Swing a
 
 ### Transaction Page
 - After login or sign-up, customers can perform various transactions:
-  - Deposit: Initiate the account with an initial deposit.
+  - Deposit: Initiate the account with an initial deposit or used for depositing money in an exsiting account.
   - Withdraw: Withdraw money from the account.
   - Pin Change: Change the account's pin code.
   - Fast Cash: Quickly withdraw a pre-defined amount.
@@ -62,4 +62,4 @@ Welcome to the Banking Management System, a Java-based application using Swing a
 
 - Ensure that you have the necessary libraries and have set up the MySQL database before running the project.
 
-Feel free to explore and enhance the functionality of the Banking Management System! If you encounter any issues or have suggestions, please contribute to the project by submitting issues or pull requests. Happy banking!
+Feel free to explore and enhance the functionality of the Banking Management System! If you encounter any issues or have suggestions, please contribute to the project by submitting issues. Happy banking!
