@@ -17,6 +17,8 @@ public class FastCash extends JFrame implements ActionListener {
         this.pin = pin;
         setLayout(null);
 
+// Creating an ImageIcon object with the image file "atm.jpg"
+        
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
         Image i2 = i1.getImage().getScaledInstance(1000, 1180, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
@@ -24,10 +26,12 @@ public class FastCash extends JFrame implements ActionListener {
         label3.setBounds(0, 0, 960, 1080);
         add(label3);
 
+// Creating a JLabel for displaying the text "SELECT WITHDRAWAL AMOUNT"
         label1 = new JLabel("SELECT WITHDRAWAL AMOUNT");
         label1.setForeground(Color.WHITE);
         label1.setFont(new Font("System", Font.BOLD, 16));
 
+// Creating JButtons for different withdrawal amounts and setting their positions and sizes
         button1 = new JButton("100");
         button1.setBounds(170, 499, 150, 35);
         button1.addActionListener(this);
@@ -65,6 +69,7 @@ public class FastCash extends JFrame implements ActionListener {
 
         setLayout(null);
 
+// Setting the position and size of the label1
         label1.setBounds(235, 400, 700, 35);
         label3.add(label1);
 
@@ -75,6 +80,7 @@ public class FastCash extends JFrame implements ActionListener {
 
     }
 
+// ActionListener implementation for handling button clicks
     public void actionPerformed(ActionEvent ae) {
         try {
             Conn connection  = new Conn();
