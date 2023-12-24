@@ -6,33 +6,30 @@ import java.sql.*;
 import java.util.Date;
 // Declaring the FastCash class that extends JFrame and implements ActionListener interface
 public class FastCash extends JFrame implements ActionListener {
-
     JLabel label1, label3;
     JButton button1, button2, button3, button4, button5, button6, button7;
     String pin;
 
-// Constructor for the FastCash class that takes a pin as a parameter
-
+   // Constructor for the FastCash class that takes a pin as a parameter
     FastCash(String pin) {
 
         this.pin = pin;
         setLayout(null);
 
-// Creating an ImageIcon object with the image file "atm.jpg"
-        
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
-        Image i2 = i1.getImage().getScaledInstance(1000, 1180, Image.SCALE_DEFAULT);
-        ImageIcon i3 = new ImageIcon(i2);
-        label3 = new JLabel(i3);
+        // Creating an ImageIcon object with the image file "atm.jpg"
+        ImageIcon image1 = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
+        Image image2 = image1.getImage().getScaledInstance(1000, 1180, Image.SCALE_DEFAULT);
+        ImageIcon image3 = new ImageIcon(image2);
+        label3 = new JLabel(image3);
         label3.setBounds(0, 0, 960, 1080);
         add(label3);
 
-// Creating a JLabel for displaying the text "SELECT WITHDRAWAL AMOUNT"
+        // Creating a JLabel for displaying the text "SELECT WITHDRAWAL AMOUNT"
         label1 = new JLabel("SELECT WITHDRAWAL AMOUNT");
         label1.setForeground(Color.WHITE);
         label1.setFont(new Font("System", Font.BOLD, 16));
 
-// Creating JButtons for different withdrawal amounts and setting their positions and sizes
+        // Creating JButtons for different withdrawal amounts and setting their positions and sizes
         button1 = new JButton("100");
         button1.setBounds(170, 499, 150, 35);
         button1.addActionListener(this);
@@ -70,23 +67,23 @@ public class FastCash extends JFrame implements ActionListener {
 
         setLayout(null);
 
-// Setting the position and size of the label1
+        // Setting the position and size of the label1
         label1.setBounds(235, 400, 700, 35);
         label3.add(label1);
 
+        // Setting the size and the location of the window
         setSize(960, 1080);
         setLocation(350, 0);
         setUndecorated(true);
         setVisible(true);
-
     }
 
-// ActionListener implementation for handling button clicks
+    // ActionListener implementation for handling button clicks
     public void actionPerformed(ActionEvent ae) {
         try {
             Conn connection  = new Conn();
             
-// Getting the text of the clicked button
+            // Getting the text of the clicked button
             String amount = ((JButton)ae.getSource()).getText();
             ResultSet resultSets = connection.statement.executeQuery("select * from bank where pin = '"+pin+"'");
             int balance = 0;
@@ -99,7 +96,7 @@ public class FastCash extends JFrame implements ActionListener {
                 }
             }
             
-//Checking if there is sufficient balance for withdrawal
+            //Checking if there is sufficient balance for withdrawal
             if (ae.getSource() != button7 && balance < Integer.parseInt(amount)) {
                 JOptionPane.showMessageDialog(null, "Insufficient Balance");
                 return;
@@ -125,7 +122,7 @@ public class FastCash extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-// Creating an instance of the FastCash class with an empty pin and making it visible
+        // Creating an instance of the FastCash class with an empty pin and making it visible
         new FastCash("").setVisible(true);
     }
 }
