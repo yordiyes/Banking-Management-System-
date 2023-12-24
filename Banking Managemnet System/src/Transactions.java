@@ -19,8 +19,6 @@ public class Transactions extends JFrame implements ActionListener{
         // Create a label with the image and set its bounds, and add to the frame
         JLabel image = new JLabel(i3);
         image.setBounds(0, 0, 900, 900);
-
-        // Add the label to the frame
         add(image);
 
         // Create a label with the text "please select your transaction" and set its properties
