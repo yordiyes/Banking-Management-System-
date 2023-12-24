@@ -94,7 +94,7 @@ public class Login extends JFrame implements ActionListener {
             String cardNumber = cardTextField.getText();
             String pinNumber = pinTextField.getText();
             String query = "select * from login where cardnumber = '" + cardNumber + "'and pin = '"+ pinNumber +"'";
-
+            // Excuting the query and Checking the result set and if it is not correct generating a message
             try{
                 ResultSet rs = conection.statement.executeQuery(query);
 
