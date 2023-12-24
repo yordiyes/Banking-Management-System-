@@ -21,7 +21,7 @@ public class FastCash extends JFrame implements ActionListener {
         label3.setBounds(0, 0, 960, 1080);
         add(label3);
 
-        lable1 = new JLabel("SELECT WITHDRAWL AMOUNT");
+        lable1 = new JLabel("SELECT WITHDRAWAL AMOUNT");
         lable1.setForeground(Color.WHITE);
         lable1.setFont(new Font("System", Font.BOLD, 16));
 
