@@ -1,5 +1,4 @@
-//Importing the Test class from the org.junit.jupiter.api package.
-//Importing the ActionEvent class from the java.awt.event package.
+//Importing the Test class from the org.junit.jupiter.api package and the java.awt.event package.
 import org.junit.jupiter.api.Test;
 import java.awt.event.ActionEvent;
 
@@ -59,8 +58,7 @@ public class FastCashTest {
     @Test
     void actionPerformed_button7_backButtonClicked_navigatesToTransactions() {
         FastCash fastCash = new FastCash("");
-        // Invoking the actionPerformed method of the fastCash instance 
-        // with an ActionEvent object representing a back button click as a parameter.
+        // Invoking the actionPerformed method of the fastCash instance
         fastCash.actionPerformed(new ActionEvent(fastCash.button7,ActionEvent.ACTION_PERFORMED,"back"));
     }
 
