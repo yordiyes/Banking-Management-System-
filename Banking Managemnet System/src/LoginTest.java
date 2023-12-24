@@ -2,6 +2,19 @@ import org.junit.jupiter.api.Test;
 import java.awt.event.ActionEvent;
 import static org.junit.jupiter.api.Assertions.*;
 public class LoginTest {
+    @org.junit.Test
+    public void testLoginButtonAction() {
+        // Create an instance of the Login class
+        Login loginFrame = new Login();
+
+        // Set values for card number and PIN for testing
+        loginFrame.cardTextField.setText("testCardNumber");
+        loginFrame.pinTextField.setText("testPin");
+
+
+        loginFrame.actionPerformed(new ActionEvent(loginFrame.login, ActionEvent.ACTION_PERFORMED, "login"));
+
+    }
     @Test
     public void testValidLogin() {
         // Create an instance of the Login class
