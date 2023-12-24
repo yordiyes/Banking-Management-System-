@@ -185,7 +185,7 @@ public class SignupTwo extends JFrame implements ActionListener {
             seniorcitizen = "No";
         }
 
-            String existingaccount = null;
+        String existingaccount = null;
         if (eyes.isSelected()) {
             existingaccount = "Yes";
         } else if (eno.isSelected()) {
