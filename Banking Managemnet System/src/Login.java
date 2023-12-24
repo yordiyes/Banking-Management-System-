@@ -14,10 +14,10 @@ public class Login extends JFrame implements ActionListener {
         setLayout(null);
 
         // Creating and scaling the logo image
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/logo.jpg"));
-        Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
-        ImageIcon i3 = new ImageIcon(i2);
-        JLabel label = new JLabel(i3);
+        ImageIcon image1 = new ImageIcon(ClassLoader.getSystemResource("icons/logo.jpg"));
+        Image image2 = image1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
+        ImageIcon image3 = new ImageIcon(image2);
+        JLabel label = new JLabel(image3);
         add(label);
 
         // Creating and setting the text label
@@ -76,7 +76,7 @@ public class Login extends JFrame implements ActionListener {
 
         getContentPane().setBackground(Color.white);
         setSize(700, 600);
-        setLocation(400, 0);
+        setLocation(350, 0);
         setVisible(true);
         label.setBounds(70, 10, 100, 100);
 
@@ -89,12 +89,12 @@ public class Login extends JFrame implements ActionListener {
             cardTextField.setText(" ");
             pinTextField.setText("");
         }else if (e.getSource() == login) {
-            // Perform login functionality
+            // creating connection object
             Conn conection = new Conn();
             String cardNumber = cardTextField.getText();
             String pinNumber = pinTextField.getText();
             String query = "select * from login where cardnumber = '" + cardNumber + "'and pin = '"+ pinNumber +"'";
-
+            // Excuting the query and Checking the result set and if it is not correct generating a message
             try{
                 ResultSet rs = conection.statement.executeQuery(query);
 

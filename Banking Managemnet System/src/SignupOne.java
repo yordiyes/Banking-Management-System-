@@ -191,7 +191,7 @@ public class SignupOne extends JFrame implements ActionListener{
 
         //seting the size of the window to 900 by 900
         setSize(900, 900);
-        setLocation(350,10);
+        setLocation(350, 0);
         setVisible(true);
     }
 

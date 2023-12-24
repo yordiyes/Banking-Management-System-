@@ -1,19 +1,27 @@
-//importing
+// Importing necessary Java Swing and AWT libraries
 import javax.swing.*;
 import javax.swing.text.AbstractDocument;
 import java.awt.*;
 import java.awt.event.*;
 
+// SignupTwo class extends JFrame and implements ActionListener interface
+
 public class SignupTwo extends JFrame implements ActionListener {
+    // Declaration of GUI components
+
     JTextField passNumbTextField, phoneTextField;
     JButton next;
     JRadioButton syes, sno, eyes, eno;
     JComboBox religion, Catagory, Occupation, education, income;
     String formno;
 
+    // Constructor for SignupTwo class
+
     SignupTwo(String formno) {
         this.formno = formno;
         setLayout(null);
+
+        // Set frame title
 
         setTitle("NEW ACCOUNT APPLICATION FORM - PAGE 2");
         JLabel AdditionalDetails = new JLabel("Page 2: Additional Details");
@@ -155,10 +163,11 @@ public class SignupTwo extends JFrame implements ActionListener {
         next.addActionListener(this);
         add(next);
 
+        // Set background color
         getContentPane().setBackground(Color.white);
 
         setSize(850, 800);
-        setLocation(350, 10);
+        setLocation(350, 0);
         setVisible(true);
     }
     public void actionPerformed(ActionEvent ae) {
