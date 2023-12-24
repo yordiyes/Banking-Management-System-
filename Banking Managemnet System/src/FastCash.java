@@ -9,7 +9,6 @@ public class FastCash extends JFrame implements ActionListener {
     JLabel lable1, label3;
     JButton button1, button2, button3, button4, button5, button6, button7;
     String pin;
-
     FastCash(String pin) {
 
         this.pin = pin;
@@ -67,7 +66,7 @@ public class FastCash extends JFrame implements ActionListener {
         label3.add(lable1);
 
         setSize(960, 1080);
-        setLocation(500, 0);
+        setLocation(350, 0);
         setUndecorated(true);
         setVisible(true);
 

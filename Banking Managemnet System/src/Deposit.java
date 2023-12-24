@@ -18,10 +18,10 @@ public class Deposit extends JFrame implements ActionListener {
         setLayout(null);
 
         //Adding an image called "atm.jpg" in to the window
-        ImageIcon img1 = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
-        Image img2 = img1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
-        ImageIcon img3 = new ImageIcon(img2);
-        JLabel image = new JLabel(img3);
+        ImageIcon image1 = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
+        Image image2 = image1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
+        ImageIcon image3 = new ImageIcon(image2);
+        JLabel image = new JLabel(image3);
         image.setBounds(0, 0, 900, 900);
         add(image);
 
@@ -48,7 +48,7 @@ public class Deposit extends JFrame implements ActionListener {
 
         // Setting the size of the window to 900 by 900
         setSize(900, 900);
-        setLocation(300, 0);
+        setLocation(350, 0);
         setVisible(true);
     }
 
