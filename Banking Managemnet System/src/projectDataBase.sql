@@ -16,18 +16,18 @@ create table signupOne(formNo varchar(20),name varchar(20), fatherName varchar(2
 
 select * from signupOne;
 
-create table signupTwo(formno varchar(20), religion varchar(20), category varchar(20), 
+create table signupTwo(formNo varchar(20), religion varchar(20), category varchar(20),
 			  income varchar(20), education varchar(20), Occupation varchar(20), 
 			  passportNo varchar(20), phone varchar(20), seniorCitizen varchar(20), existingAccount varchar(20));
 
 select * from signupTwo;
 
-create table signupThree(formno varchar(20), accountType varchar(40), 
-              cardnumber varchar(25),pin varchar(10), facility varchar(100));
+create table signupThree(formNo varchar(20), accountType varchar(40),
+              accountNumber varchar(25),pin varchar(10), facility varchar(100));
 
 select * from signupThree;
 
-create table login(formno varchar(20), cardnumber varchar(25), pin varchar(10));
+create table login(formNo varchar(20), AccountNumber varchar(25), pin varchar(10));
 
 select * from login;
 
