@@ -69,7 +69,7 @@ public class FastCash extends JFrame implements ActionListener {
 
         setLayout(null);
 
-        // Setting the position and size of the label1
+// Setting the position and size of the label1
         label1.setBounds(235, 400, 700, 35);
         label3.add(label1);
 
