@@ -2,13 +2,13 @@ import org.junit.jupiter.api.Test;
 import java.awt.event.ActionEvent;
 import static org.junit.jupiter.api.Assertions.*;
 public class LoginTest {
-    @org.junit.Test
+    @Test
     public void testLoginButtonAction() {
         // Create an instance of the Login class
         Login loginFrame = new Login();
 
         // Set values for card number and PIN for testing
-        loginFrame.cardTextField.setText("testCardNumber");
+        loginFrame.cardTextField.setText("testAccountNumber");
         loginFrame.pinTextField.setText("testPin");
 
 
