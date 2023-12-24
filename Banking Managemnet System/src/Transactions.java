@@ -13,28 +13,28 @@ public class Transactions extends JFrame implements ActionListener{
         // assign the pin number to the instance variable
         this.pinNumber = pinNumber;
 
-        // set the layout manager to null
+        // Set the layout manager to null
         setLayout(null);
 
-        // Load an image from the icons folder and scale it to fit the frame
+        // Load an image from the icons folder and then scale it to fit the frame
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
         Image i2 = i1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
 
-        // create a label with the image and set its bounds, and add to the frame
+        // Create a label with the image and set its bounds, and add to the frame
         JLabel image = new JLabel(i3);
         image.setBounds(0, 0, 900, 900);
 
-        // add the label to the frame
+        // Add the label to the frame
         add(image);
 
-        // create a label with the text "please select your transaction" and set its properties
+        // Create a label with the text "please select your transaction" and set its properties
         JLabel text = new JLabel("Please Select Your Transaction");
         text.setBounds(210, 310, 700, 35);
         text.setForeground(Color.WHITE);
         text.setFont(new Font("System", Font.BOLD, 16));
 
-        // add the text label to the image label
+        // Add the text label to the image label
         image.add(text);
 
         // create a button with the text "Deposit" and set its bounds and action listener
