@@ -3,7 +3,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
 import java.util.Date;
-
+// Declaring the FastCash class that extends JFrame and implements ActionListener interface
 public class FastCash extends JFrame implements ActionListener {
 
     JLabel label1, label3;
