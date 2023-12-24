@@ -185,7 +185,7 @@ public class SignupTwo extends JFrame implements ActionListener {
             seniorcitizen = "No";
         }
 
-        String existingaccount = null;
+            String existingaccount = null;
         if (eyes.isSelected()) {
             existingaccount = "Yes";
         } else if (eno.isSelected()) {
@@ -196,9 +196,9 @@ public class SignupTwo extends JFrame implements ActionListener {
         String phoneNumber = phoneTextField.getText();
 
          try {
-//            Conn connection = new Conn();
-//            String query = "insert into signupTwo values('" + formno + "','" + Religion + "','" + Category + "','" + Income + "','" + Education + "','" + inOccupation + "','" + passPortNumber + "','" + phoneNumber + "','" + seniorcitizen + "','" + existingaccount + "')";
-//            connection.statement.executeUpdate(query);
+            Conn connection = new Conn();
+            String query = "insert into signupTwo values('" + formno + "','" + Religion + "','" + Category + "','" + Income + "','" + Education + "','" + inOccupation + "','" + passPortNumber + "','" + phoneNumber + "','" + seniorcitizen + "','" + existingaccount + "')";
+            connection.statement.executeUpdate(query);
 
             setVisible(false);
             new SignUpThree(formno).setVisible(true);
