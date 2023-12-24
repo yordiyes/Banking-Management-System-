@@ -9,6 +9,9 @@ public class FastCash extends JFrame implements ActionListener {
     JLabel label1, label3;
     JButton button1, button2, button3, button4, button5, button6, button7;
     String pin;
+
+// Constructor for the FastCash class that takes a pin as a parameter
+
     FastCash(String pin) {
 
         this.pin = pin;
