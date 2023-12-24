@@ -1,8 +1,6 @@
 import org.junit.Test;
-
 import java.awt.event.ActionEvent;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static junit.framework.Assert.assertFalse;
 
 public class SignupTwoTest {
 @Test
@@ -19,8 +17,8 @@ public void testActionPerformed(){
         signupTwo.sno.setSelected(false);
         signupTwo.eyes.setSelected(true);
         signupTwo.eno.setSelected(false);
-        signupTwo.pan.setText("AB1234567");
-        signupTwo.phon.setText("1234567890");
+        signupTwo.passNumbTextField.setText("AB1234567");
+        signupTwo.phoneTextField.setText("1234567890");
 
         signupTwo.actionPerformed(null);
         assertFalse(signupTwo.isVisible());
