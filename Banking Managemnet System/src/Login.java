@@ -1,4 +1,4 @@
-//Importing the neccessary packegs
+//importing the necessary libraries
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
