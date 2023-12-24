@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 import java.sql.*;
 
 // Declaring the login class that extends JFrame and implements ActionListener interface
-
 public class Login extends JFrame implements ActionListener {
     JButton login, signup, clear;
     JTextField cardTextField;
@@ -50,7 +49,7 @@ public class Login extends JFrame implements ActionListener {
         pinTextField.setFont(new Font("Arial", Font.BOLD, 20));
         add(pinTextField);
 
-// Creating and setting the signin button       
+// Creating and setting the sign_in button
         login = new JButton("SIGN IN");
         login.setBounds(300, 300, 100, 30);
         login.setForeground(Color.WHITE);
@@ -94,7 +93,7 @@ public class Login extends JFrame implements ActionListener {
             Conn connection = new Conn();
             String cardNumber = cardTextField.getText();
             String pinNumber = pinTextField.getText();
-            String query = "select * from login where cardnumber = '" + cardNumber + "'and pin = '"+ pinNumber +"'";
+            String query = "select * from login where card_number = '" + cardNumber + "'and pin = '"+ pinNumber +"'";
            
             // Executing the query and Checking the result set and if it is not correct generating a message
             try{
@@ -117,7 +116,7 @@ public class Login extends JFrame implements ActionListener {
         }
     }
     
-    //Calling the constructor login to excute the whole code
+    //Calling the constructor login to execute the whole code
     public static void main(String[] args)
     {
         new Login();

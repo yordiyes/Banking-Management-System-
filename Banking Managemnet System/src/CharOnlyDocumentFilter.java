@@ -5,7 +5,6 @@ import javax.swing.text.DocumentFilter;
 
 // Document filter to allow only alphabetic (character) input in any text field
 public class CharOnlyDocumentFilter extends DocumentFilter {
-
     // Override insertString method to filter and allow only alphabetic characters during insertion
     @Override
     public void insertString(FilterBypass fb, int offset, String string, AttributeSet attr)
