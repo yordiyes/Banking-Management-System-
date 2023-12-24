@@ -1,9 +1,10 @@
+//importing all the necessary libraries
 import org.junit.Test;
 
 import java.awt.event.ActionEvent;
-
+//create signup three class
 public class SignUpThreeTest {
-
+//creating an expressive method for submit button
     @Test
     public void testActionPerformedSubmitShouldTransferToDeposit() {
         SignUpThree signUpThree = new SignUpThree("");
@@ -15,6 +16,7 @@ public class SignUpThreeTest {
         signUpThree.actionPerformed(new ActionEvent(signUpThree.submit, ActionEvent.ACTION_PERFORMED, "Submit"));
 
     }
+    //creating an expressive method for the button cancel
     @Test
     public void testActionPerformedShouldNavigateToLogin() {
         SignUpThree signUpThree = new SignUpThree("");
