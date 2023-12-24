@@ -84,6 +84,8 @@ public class FastCash extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         try {
             Conn connection  = new Conn();
+            
+// Getting the text of the clicked button
             String amount = ((JButton)ae.getSource()).getText();
             ResultSet resultSets = connection.statement.executeQuery("select * from bank where pin = '"+pin+"'");
             int balance = 0;
