@@ -195,7 +195,13 @@ public class SignupTwo extends JFrame implements ActionListener {
         String passPortNumber = passNumbTextField.getText();
         String phoneNumber = phoneTextField.getText();
 
-         try {
+        // Testing if the data is inserted or not .
+        if (phoneNumber.isEmpty() || passPortNumber.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Fill The Whole Part Of The Form");
+            return;
+        }
+
+        try {
             Conn connection = new Conn();
             String query = "insert into signupTwo values('" + formno + "','" + Religion + "','" + Category + "','" + Income + "','" + Education + "','" + inOccupation + "','" + passPortNumber + "','" + phoneNumber + "','" + seniorcitizen + "','" + existingaccount + "')";
             connection.statement.executeUpdate(query);
