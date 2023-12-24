@@ -67,7 +67,7 @@ public class FastCash extends JFrame implements ActionListener {
         label3.add(lable1);
 
         setSize(960, 1080);
-        setLocation(500, 0);
+        setLocation(350, 0);
         setUndecorated(true);
         setVisible(true);
 

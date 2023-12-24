@@ -48,7 +48,7 @@ public class Deposit extends JFrame implements ActionListener {
 
         // Setting the size of the window to 900 by 900
         setSize(900, 900);
-        setLocation(300, 0);
+        setLocation(350, 0);
         setVisible(true);
     }
 
