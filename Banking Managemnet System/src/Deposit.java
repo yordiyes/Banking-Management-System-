@@ -20,8 +20,8 @@ public class Deposit extends JFrame implements ActionListener {
         //Adding an image called "atm.jpg" in to the window
         ImageIcon image1 = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
         Image image2 = image1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
-        ImageIcon img3 = new ImageIcon(image2);
-        JLabel image = new JLabel(img3);
+        ImageIcon image3 = new ImageIcon(image2);
+        JLabel image = new JLabel(image3);
         image.setBounds(0, 0, 900, 900);
         add(image);
 
