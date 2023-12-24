@@ -81,6 +81,8 @@ public class Login extends JFrame implements ActionListener {
 
     }
 
+// ActionListener implementation for handling button clicks
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == clear) {
@@ -89,7 +91,7 @@ public class Login extends JFrame implements ActionListener {
             pinTextField.setText("");
         }else if (e.getSource() == login) {
             // creating connection object
-            Conn conection = new Conn();
+            Conn connection = new Conn();
             String cardNumber = cardTextField.getText();
             String pinNumber = pinTextField.getText();
             String query = "select * from login where cardnumber = '" + cardNumber + "'and pin = '"+ pinNumber +"'";
