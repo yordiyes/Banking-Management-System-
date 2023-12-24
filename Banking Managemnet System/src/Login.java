@@ -28,7 +28,7 @@ public class Login extends JFrame implements ActionListener {
         add(text);
 
         // Creating and setting the card number label
-        JLabel cardNo = new JLabel("Card Number:");
+        JLabel cardNo = new JLabel("Account Number:");
         cardNo.setFont(new Font("Raleway", Font.BOLD, 20));
         cardNo.setBounds(120, 150, 600, 40);
         add(cardNo);
@@ -40,7 +40,7 @@ public class Login extends JFrame implements ActionListener {
         add(cardTextField);
 
         // Creating and setting the PIN label
-        JLabel pin = new JLabel("Pin:");
+        JLabel pin = new JLabel("Pin code:");
         pin.setFont(new Font("Raleway", Font.BOLD, 20));
         pin.setBounds(120, 220, 600, 40);
         add(pin);
