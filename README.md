@@ -6,7 +6,7 @@ Welcome to the Banking Management System, a Java-based application using Swing a
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/banking-management-system.git
+   https://github.com/yordiyes/Banking-Management-System-.git
    ```
 
 2. **Add Libraries to IDE:**
