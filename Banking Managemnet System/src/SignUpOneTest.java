@@ -4,19 +4,21 @@ import java.awt.event.ActionEvent;
 public class SignUpOneTest {
     @Test
     public void testActionPerformed(){
-        // Manually set values for the JComboBox components (religion, category, income, education, occupation)
+        // Manually set values for the TextField components
         SignupOne signupOne = new SignupOne();
         signupOne.nameTextField.setText("Yordanos");
         signupOne.fatherNameTextField.setText("Yeshitla");
         signupOne.dateChooser.getCalendar();
-        signupOne.male.setSelected(true);
-        signupOne.female.setSelected(false);
         signupOne.emailTextField.setText("yordiman614@gmmail.com");
-        signupOne.unMarried.setSelected(true);
         signupOne.addressTextField.setText("Addis Ababa");
         signupOne.cityTextField.setText("Akaki");
         signupOne.regionTextField.setText("Addis");
         signupOne.pinTextField.setText("2323");
+
+        // Manually set values for the Radio button components
+        signupOne.male.setSelected(true);
+        signupOne.female.setSelected(false);
+        signupOne.unMarried.setSelected(true);
     }
     @Test
     public void testActionPerformedNextShouldTransferToSignUpTwo(){
