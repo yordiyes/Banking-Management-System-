@@ -5,6 +5,8 @@ import java.awt.event.*;
 import java.awt.event.ActionEvent;
 import java.sql.*;
 
+// Declaring the login class that extends JFrame and implements ActionListener interface
+
 public class Login extends JFrame implements ActionListener {
     JButton login, signup, clear;
     JTextField cardTextField;
