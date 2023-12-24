@@ -164,7 +164,6 @@ public class SignUpThree extends JFrame implements ActionListener {
         // Handling button clicks
         if(ae.getSource() == submit){
             String accountType = "";
-
             // Check if any radio button is selected
             if (radioButton1.isSelected()) {
                 accountType = "Saving Account";
@@ -175,7 +174,6 @@ public class SignUpThree extends JFrame implements ActionListener {
             } else if (radioButton4.isSelected()) {
                 accountType = "Reoccurring account";
             }
-
             // Check if any radio button is selected
             if (accountType.equals("")) {
                 JOptionPane.showMessageDialog(null, "Please choose an account type");
