@@ -89,12 +89,13 @@ public class Login extends JFrame implements ActionListener {
             cardTextField.setText(" ");
             pinTextField.setText("");
         }else if (e.getSource() == login) {
-            // Perform login functionality
+            // creating connection object
             Conn conection = new Conn();
             String cardNumber = cardTextField.getText();
             String pinNumber = pinTextField.getText();
             String query = "select * from login where cardnumber = '" + cardNumber + "'and pin = '"+ pinNumber +"'";
-
+           
+            // Executing the query and Checking the result set and if it is not correct generating a message
             try{
                 ResultSet rs = conection.statement.executeQuery(query);
 
@@ -114,7 +115,10 @@ public class Login extends JFrame implements ActionListener {
             new SignupOne().setVisible(true);
         }
     }
-    public static void main(String[] args) {
+    
+    //Calling the constructor login to excute the whole code
+    public static void main(String[] args)
+    {
         new Login();
     }
 }
