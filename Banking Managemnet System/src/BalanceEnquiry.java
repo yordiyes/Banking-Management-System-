@@ -6,12 +6,16 @@ import java.sql.*;
 
 // Define a class named BalanceEnquiry that extends JFrame and implements ActionListener
 public class BalanceEnquiry extends JFrame implements ActionListener {
+
+    // define back and pinNumber as instance variable
     JButton back;
     String pinNumber;
     // Define a constructor that takes a pin number as parameter
     BalanceEnquiry(String pinnumber){
 
+        // assign the pinnumber to the instance variable
         this.pinNumber = pinnumber;
+
         // set the layout manager to null
         setLayout(null);
 
@@ -23,6 +27,7 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
         // create a label with the image and set its bounds
         JLabel image = new JLabel(i3);
         image.setBounds(0,0,900,900);
+
         // add the label to the frame
         add(image);
 
@@ -30,6 +35,7 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
         back = new JButton("Back");
         back.setBounds(355,520,150,30);
         back.addActionListener(this);
+
         // add the back button to the image label
         image.add(back);
 
