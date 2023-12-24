@@ -5,12 +5,12 @@ import java.awt.event.ActionEvent;
 
 // Declaring the FastCashTest class.
 public class FastCashTest {
-    
- //Defining a test method named actionPerformed buttons_Clicked_successfully.
- //This method tests the functionality of buttons from button 1 to button 7 being clicked successfully it is the same for.
- // From line 16-20 ,Creating an instance of the FastCash class with an empty string parameter.
- // Setting the text of button1 to "100".
- // Invoking the actionPerformed method of the fastCash instance with an ActionEvent object as a parameter.
+
+//Defining a test method named actionPerformed buttons_Clicked_successfully.
+//This method tests the functionality of buttons from button 1 to button 7 being clicked successfully it is the same for.
+// From line 16-20 ,Creating an instance of the FastCash class with an empty string parameter.
+// Setting the text of button1 to "100".
+// Invoking the actionPerformed method of the fastCash instance with an ActionEvent object as a parameter.
 
     @Test
     void actionPerformed_button1_Clicked_successfully() {
@@ -19,6 +19,7 @@ public class FastCashTest {
         fastCash.actionPerformed(new ActionEvent(fastCash.button1,ActionEvent.ACTION_PERFORMED,"withdraw"));
     }
 
+// Line 24-63: Similar to lines 16-20 but different in setting the text amount.
     @Test
     void actionPerformed_button2_Clicked_successfully() {
         FastCash fastCash = new FastCash(" ");
@@ -58,18 +59,10 @@ public class FastCashTest {
     @Test
     void actionPerformed_button7_backButtonClicked_navigatesToTransactions() {
         FastCash fastCash = new FastCash("");
- // Invoking the actionPerformed method of the fastCash instance with an ActionEvent object as a parameter
+        // Invoking the actionPerformed method of the fastCash instance 
+        // with an ActionEvent object representing a back button click as a parameter.
         fastCash.actionPerformed(new ActionEvent(fastCash.button7,ActionEvent.ACTION_PERFORMED,"back"));
     }
 
 }
-
-
-//        Line 10: Creating an instance of the FastCash class with an empty string parameter.
-//        Line 11: Setting the text of button1 to "100".
-//        Line 12: Invoking the actionPerformed method of the fastCash instance with an ActionEvent object as a parameter.
-//        Line 19-27: Similar to lines 9-17, these test methods simulate button clicks with different values and test the corresponding functionality.
-//        Line 30-36: Defining a test method named actionPerformed_backButtonClicked_navigatesToTransactions. This method tests the functionality ofthe back button being clicked and navigating to transactions.
-//        Line 31: Creating an instance of the FastCash class with an empty string parameter.
-//        Line 32: Invoking the actionPerformed method of the fastCash instance with an ActionEvent object representing a back button click as a parameter
 
