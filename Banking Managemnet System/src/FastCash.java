@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class FastCash extends JFrame implements ActionListener {
 
-    JLabel lable1, label3;
+    JLabel label1, label3;
     JButton button1, button2, button3, button4, button5, button6, button7;
     String pin;
     FastCash(String pin) {
@@ -21,9 +21,9 @@ public class FastCash extends JFrame implements ActionListener {
         label3.setBounds(0, 0, 960, 1080);
         add(label3);
 
-        lable1 = new JLabel("SELECT WITHDRAWAL AMOUNT");
-        lable1.setForeground(Color.WHITE);
-        lable1.setFont(new Font("System", Font.BOLD, 16));
+        label1 = new JLabel("SELECT WITHDRAWAL AMOUNT");
+        label1.setForeground(Color.WHITE);
+        label1.setFont(new Font("System", Font.BOLD, 16));
 
         button1 = new JButton("100");
         button1.setBounds(170, 499, 150, 35);
@@ -62,8 +62,8 @@ public class FastCash extends JFrame implements ActionListener {
 
         setLayout(null);
 
-        lable1.setBounds(235, 400, 700, 35);
-        label3.add(lable1);
+        label1.setBounds(235, 400, 700, 35);
+        label3.add(label1);
 
         setSize(960, 1080);
         setLocation(350, 0);
