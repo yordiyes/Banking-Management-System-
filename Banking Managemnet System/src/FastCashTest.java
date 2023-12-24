@@ -7,7 +7,11 @@ import java.awt.event.ActionEvent;
 public class FastCashTest {
     
  //Defining a test method named actionPerformed buttons_Clicked_successfully.
- //This method tests the functionality of buttons being clicked successfully.
+ //This method tests the functionality of buttons from button 1 to button 7 being clicked successfully it is the same for.
+ // From line 16-20 ,Creating an instance of the FastCash class with an empty string parameter.
+ // Setting the text of button1 to "100".
+ // Invoking the actionPerformed method of the fastCash instance with an ActionEvent object as a parameter.
+
     @Test
     void actionPerformed_button1_Clicked_successfully() {
         FastCash fastCash = new FastCash("");
@@ -54,6 +58,7 @@ public class FastCashTest {
     @Test
     void actionPerformed_button7_backButtonClicked_navigatesToTransactions() {
         FastCash fastCash = new FastCash("");
+ // Invoking the actionPerformed method of the fastCash instance with an ActionEvent object as a parameter
         fastCash.actionPerformed(new ActionEvent(fastCash.button7,ActionEvent.ACTION_PERFORMED,"back"));
     }
 
