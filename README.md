@@ -50,7 +50,7 @@ Welcome to the Banking Management System, a Java-based application using Swing a
 ## How to Run
 
 1. **Run the Application:**
-   - Execute the main Java file to launch the Banking Management System.
+   - Execute the login Java file in the src folder to launch the Banking Management System.
 
 2. **Login or Sign-Up:**
    - Use existing credentials to log in or follow the sign-up process for new customers.
