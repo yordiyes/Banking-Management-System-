@@ -7,12 +7,9 @@ import java.util.Date;
 public class Withdrawal extends JFrame implements ActionListener {
     JTextField amount;
     JButton withdraw, back;
-    String pinNumber;
-    Withdrawal(String pinNumber){
-
+    String pinNumber;    Withdrawal(String pinNumber){
         this.pinNumber = pinNumber;
         setLayout(null);
-
         ImageIcon img1 = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
         Image img2 = img1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
         ImageIcon img3 = new ImageIcon(img2);
@@ -41,8 +38,9 @@ public class Withdrawal extends JFrame implements ActionListener {
         back.addActionListener(this);
         image.add(back);
 
-        setSize(900, 900);
-        setLocation(350, 0);
+        setSize(1300, 700);
+        setLocation(0, 0);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
 
@@ -69,7 +67,6 @@ public class Withdrawal extends JFrame implements ActionListener {
             new Transactions(pinNumber).setVisible(true);
         }
     }
-
     public static void main(String[] args) {
         new Withdrawal("");
     }
